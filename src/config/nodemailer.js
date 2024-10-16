@@ -16,13 +16,11 @@ export class Nodemailer {
     const { htmlBody, subject, to } = options;
 
     try {
-      console.log({ to, subject, htmlBody });
       await this.transporter.sendMail({
         to,
         subject,
         html: htmlBody,
       });
-      console.lo;
 
       return true;
     } catch (error) {
