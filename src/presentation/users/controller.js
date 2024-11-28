@@ -144,10 +144,10 @@ const sendEmailRecover = async (email) => {
   );
 
   const isSent = await nodemailer.sendEmail({
-    subject: "Validate your email",
+    subject: "Recuperar Contraseña",
     to: email,
-    htmlBody: `<h1>Click the next link to validate your email<h1>
-    <a href="${link}">Validate your email: ${email}</a> `,
+    htmlBody: `<h1>Clickea el siguiente link para recuperar tu contraseña<h1>
+    <a href="${link}">Recuperar contraseña: ${email}</a> `,
   });
 
   if (!isSent) throw new Error("Error enviando el email");
